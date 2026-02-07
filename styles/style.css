@@ -1,9 +1,184 @@
-:root {
-  --bg-color: #000028;
-  --text-color: #f1b2ce;
-  --accent-color: #ff0070;
+.page {
+  background-color: var(--bg-color);
 }
 
-.page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+.header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr min-content 1fr;
+  align-items: center;
+  padding: 0 10px;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
+
+.decoration-up {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.decoration-up_border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--accent-text-color);
+  border-right: 1px solid var(--accent-text-color);
+  position: relative;
+}
+
+.decoration-up_circle {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
+  display: var(--should-show-rec);
+}
+
+.decoration-up_rec {
+  position: absolute;
+  right: 25px;
+  color: var(--accent-color);
+  display: var(--should-show-rec);
+}
+
+.decoration-down {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  bottom: 10px;
+  left: 10px;
+  border-bottom: 1px solid var(--accent-text-color);
+  border-left: 1px solid var(--accent-text-color);
+}
+
+:root.theme-dark header {
+  background-image: url(../images/cover-image-dark.png);
+}
+
+:root.light-dark header {
+  background-image: url(../images/cover-image-light.png);
+}
+
+.title {
+  color: var(--title-color);
+  text-shadow: 4px 4px var(--accent-color);
+  font-size: clamp(116px, 74.21px + 5.966vw, 157px);
+  line-height: 83%;
+  font-weight: bold;
+}
+
+.header__description {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: var(--accented-subtext-color);
+  background-color: var(--accent-color);
+  margin-bottom: 12px;
+}
+
+.header__theme-menu {
+  justify-self: end;
+  margin-top: 12px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: calc(10px + 0.0625rem * 2);
+}
+
+.header__theme-menu-button {
+  appearance: none;
+  background-color: transparent;
+  color: var(--accent-text-color);
+  border: none;
+  font-size: 1.125rem;
+  padding: 0 13px 0.0625rem;
+  text-transform: lowercase;
+}
+
+.header__theme-menu-button[disabled] {
+  border: 1px solid currentColor;
+}
+
+.content {
+  margin: clamp(40px, 7.5vw, 60px) 0;
+  font-size: 1.125rem;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(50px, calc(10px + 9.5vw), 80px);
+  color: var(--text-color);
+  padding: 0 clamp(10px, 2vw, 20px);
+  line-height: 130%;
+}
+
+.content__section_title {
+  color: var(--accent-text-color);
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.content__section-list_title {
+  color: var(--accented-subtext-color);
+  background-color: var(--accent-color);
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.content__section_container .content__section-list_title {
+  margin-bottom: 20px;
+}
+
+.content__section_list-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.content__section-list_subtitle {
+  color: var(--accented-subtext-color);
+  background-color: var(--accent-color);
+  font-weight: normal;
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+}
+
+.content__galery-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content__gallery-image {
+  width: 100%;
+}
+
+.footer {
+  --should-show-rec: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+
+/* .content__section {
+}
+.content__section_list {
+}
+.content__section-list-description {
+}
+.content__why-is-so-hard {
+}
+.content__focus-concentration {
+}
+.content__how-to-focus {
+}
+.content__gallery {
+} */
