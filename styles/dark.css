@@ -13,7 +13,7 @@
   --accented-subtext-color: #000028;
   --btn-hover-outline-color: rgba(255, 0, 112, 0.4);
   --should-show-rec: inline-block;
-  --header-bg-image-url: url(../images/cover-image-dark.png);
+  --page-bg-image-url: url(../images/cover-image-dark.png);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,6 +25,6 @@
     --accent-text-color: #ff0070;
     --accented-subtext-color: #000028;
     --should-show-rec: inline-block;
-    --header-bg-image-url: url(../images/cover-image-dark.png);
+    --page-bg-image-url: url(../images/cover-image-dark.png);
   }
 }

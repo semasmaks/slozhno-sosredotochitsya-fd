@@ -5,6 +5,11 @@
 
 .page {
   background-color: var(--bg-color);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: var(--page-bg-image-url);
 }
 
 .link {
@@ -91,9 +96,6 @@
   align-items: center;
   height: 100vh;
   padding: clamp(10px, -2.545px + 3.333vw, 20px);
-  background-image: var(--header-bg-image-url);
-  background-position: center;
-  background-size: cover;
 }
 
 .header__paragraph {

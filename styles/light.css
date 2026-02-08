@@ -13,7 +13,7 @@
   --accented-subtext-color: #353430;
   --btn-hover-outline-color: rgba(50, 49, 45, 0.4);
   --should-show-rec: none;
-  --header-bg-image-url: url(../images/cover-image-light.png);
+  --page-bg-image-url: url(../images/cover-image-light.png);
 }
 
 @media (prefers-color-scheme: light) {
@@ -25,6 +25,6 @@
     --accent-text-color: #353430;
     --accented-subtext-color: #353430;
     --should-show-rec: none;
-    --header-bg-image-url: url(../images/cover-image-light.png);
+    --page-bg-image-url: url(../images/cover-image-light.png);
   }
 }
