@@ -24,6 +24,7 @@
     --title-color: #ffc2e6;
     --accent-text-color: #353430;
     --accented-subtext-color: #353430;
+    --btn-hover-outline-color: rgba(50, 49, 45, 0.4);
     --should-show-rec: none;
     --page-bg-image-url: url(../images/cover-image-light.png);
   }
